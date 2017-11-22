@@ -29,18 +29,17 @@ int main() {
  
 			for (j=2; j<=x; j++){	
 
-				if (x%j==0) //Dividi c por j[1, c]
+				if (x%j==0)
 				{
-					n_divisores_x+=1;	
+					n_divisores_x+=1;
+				
+					if (n_divisores_x>1){					
+						fprintf(loucura, "%d\n", x);	
+						goto inicio;						
+					}		
 				}
-				if (n_divisores_x>1){
-					
-					fprintf(loucura, "%d\n", x);
 
-					goto inicio;						
-			  }	
-
-		  }
+		    	}
 
 		}		
 	
